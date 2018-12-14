@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ThinkingSphinxTest</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <%= form_tag search_path do %>
+      <%= text_field_tag :search %>
+      <%= submit_tag "Search" %>
+    <% end %>
+
+    <p><%= link_to 'All', root_path %></p>
+
+    <%= yield %>
+    
+  </body>
+</html>
